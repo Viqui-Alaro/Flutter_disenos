@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 
-class nameScreen extends StatelessWidget {
+class BasicDesignScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Hola Mundo'),
+        child: Image(image: AssetImage('assets/landscape.jpg'))
      ),
    );
   }
