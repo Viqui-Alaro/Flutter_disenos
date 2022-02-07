@@ -6,9 +6,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Center(
-        child: Text('Hola Mundo'),
+      home: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Hola Mundo'),
+          Text('Hola MUndo'),
+        ],
+
       )
     );
   }
