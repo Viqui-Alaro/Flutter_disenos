@@ -26,18 +26,25 @@ class Title extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Column(
-          children: [
-            Text('Osheinin Lokae Camposro', style: TextStyle(fontWeight: FontWeight.bold),),
-            Text('Kardesten, Switerman',style: TextStyle(color: Colors.black45)),
-          ],
-        ),
-       
-        Icon(Icons.star,color: Colors.red,),
-        Text('41')
-      ],
+    return Container(
+    
+      margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Osheinin Lokae Camposro', style: TextStyle(fontWeight: FontWeight.bold),),
+              Text('Kardesten, Switerman',style: TextStyle(color: Colors.black45)),
+            ],
+          ),
+          Expanded(child: Container()),
+         
+          Icon(Icons.star,color: Colors.red,),
+          Text('41')
+        ],
+      ),
     );
   }
 }
