@@ -13,7 +13,12 @@ class BasicDesignScreen extends StatelessWidget {
           
           //Titulo
           Title(),
-          ButtonSection()
+          //button Section
+          ButtonSection(),
+          // Description
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text('En cuanto a la temática, ¡puedes encontrarlos de todo tipo! En el mercado existen cuentos de todo tipo, hasta de las temáticas que nunca te hubieras imaginado. Cuentos, por supuesto, con valores, pero también cuentos para tratar los celos ante la llegada de un hermanito, para cuando el niño tiene piojos, para trabajar los problemas de autoestima, para hablar de temas como el bullying o el acoso escolar... ¡No hay excusa para empezar a descubrirles el maravilloso mundo que encierran los cuentos!'))
 
         ],
       ),
