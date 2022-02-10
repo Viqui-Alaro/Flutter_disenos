@@ -8,10 +8,27 @@ class ScrollScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Background()
+          Background(),
+          MainContent()
         ],
       )
    );
+  }
+}
+
+class MainContent extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text('Hola Mundo'),
+        Text('Hola Mundogggggggggggggggggggggggggg'),
+        Text('Hola Mundo')
+      ],
+    );
   }
 }
 
