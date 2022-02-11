@@ -6,13 +6,20 @@ class ScrollScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Background(),
-          MainContent()
-        ],
-      )
+      body: Page1()
    );
+  }
+}
+
+class Page1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Background(),
+        MainContent()
+      ],
+    );
   }
 }
 
