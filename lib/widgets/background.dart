@@ -21,7 +21,10 @@ class Background extends StatelessWidget {
     return Stack(
       children: [
        Container( decoration: boxDecoration ),
-       _PinkBox()
+      Positioned(
+        top: -100,
+        left: -30,
+        child:  _PinkBox())
       ],
     );
   }
