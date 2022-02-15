@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_disenos/widgets/background.dart';
+import 'package:flutter_disenos/widgets/page_title.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class _HomeBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          
+          PageTitle()
         ],
       ),
     );
