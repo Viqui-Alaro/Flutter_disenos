@@ -10,8 +10,20 @@ class CardTable extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            _SingleCard(),
-            _SingleCard()
+            _SingleCard(color: Colors.blue,icon: Icons.border_all,text: 'General',),
+            _SingleCard(color: Colors.pinkAccent,icon: Icons.car_rental,text: 'Trasport')
+            ]
+        ),
+         TableRow(
+          children: [
+            _SingleCard(color: Colors.purple,icon: Icons.g_mobiledata_outlined,text: 'Servicios',),
+            _SingleCard(color: Colors.orange,icon: Icons.access_time_filled_rounded,text: 'Horario')
+            ]
+        ),
+         TableRow(
+          children: [
+            _SingleCard(color: Colors.greenAccent,icon: Icons.whatshot,text: 'Hospitales',),
+            _SingleCard(color: Colors.yellow,icon: Icons.baby_changing_station_outlined,text: 'Accesorios')
             ]
         )
       ],
@@ -21,6 +33,16 @@ class CardTable extends StatelessWidget {
 
 
 class _SingleCard extends StatelessWidget {
+  
+  final IconData icon;
+  final Color color;
+  final String text;
+
+  const _SingleCard({Key? key, 
+  required this.icon, 
+  required this.color, 
+  required this.text}) : super(key: key);
+
  
   @override
   Widget build(BuildContext context) {
@@ -35,11 +57,11 @@ class _SingleCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
-            backgroundColor: Colors.blue,
-            child: Icon(Icons.pie_chart_outline_sharp,size: 35,),
+            backgroundColor: this.color,
+            child: Icon(this.icon,size: 35,),
             radius: 30,
           ),
-          Text('General',style: TextStyle(color: Colors.blue,fontSize: 18))
+          Text(this.text,style: TextStyle(color: this.color,fontSize: 18))
         ],
       ),
     );
