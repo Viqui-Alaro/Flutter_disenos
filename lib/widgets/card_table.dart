@@ -66,7 +66,7 @@ class _SingleCard extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {
-    var column = Column(
+    return _CardBackground(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
         CircleAvatar(
@@ -76,25 +76,7 @@ class _SingleCard extends StatelessWidget {
         ),
        Text(this.text,style: TextStyle(color: this.color,fontSize: 18))
       ],
-    );
-    return Container(
-      margin: EdgeInsets.all(15),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 5,sigmaY: 5),
-          child: Container(
-            margin: EdgeInsets.all(15),
-            height: 180,
-            decoration: BoxDecoration(
-              color: Color.fromRGBO(62, 66, 107, 0.7),
-              borderRadius: BorderRadius.circular(20)
-            ),
-            child: column,
-          ),
-        ),
-      ),
-    );
+    ));
   }
 }
 
@@ -110,7 +92,22 @@ class _CardBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
+      margin: EdgeInsets.all(15),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 5,sigmaY: 5),
+          child: Container(
+            margin: EdgeInsets.all(15),
+            height: 180,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(62, 66, 107, 0.7),
+              borderRadius: BorderRadius.circular(20)
+            ),
+            child: this.child,
+          ),
+        ),
+      ),
     );
   }
 }
